@@ -1,0 +1,22 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+            <script type="text/javascript">
+                var bamt = parseInt(prompt("Enter Bill Amount:"))
+                var today = new Date();
+                if( today > 15 ){
+                    var day = today.getDate()
+                    var daysextra = day - 15
+                    var totalbill = bamt + (daysextra*50)
+
+
+                    alert("Total Bill Amount = " + totalbill)
+                }
+                else{
+                    alert("Total Bill Amount = "+ bamt);
+                }
+                </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<head>
+    <script type="text/javascript">
+        function check(){
+            var uname = document.getElementById("username").value;
+            var pass = document.getElementById("password").value;
+            var s1 =document.getElementById("s1")
+            s1.innerHTML=" "
+            var s2 =document.getElementById("s2")
+            s2.innerHTML=" "
+            if(uname.length<7||uname.length>13){
+                    s1.innerHTML="<font color = black>Username should have 6-12 characters</font>"
+            }
+            else if(pass.charAt(0)!="A"){
+                s2.innerHTML="<font color = black>Password should start with A</font>" 
+                }
+        }
+    </script>
+</head>
+<body bgcolor="pink" text ="red">
+<form method="GET" action="success.html">
+    Username:<input type="text" name= "username" id ="username"><span id ="s1"></span>
+    <br/>
+    Password:<input type="password" name= "password" id ="password"><span id="s2"></span>
+    <br/>
+    <input type="button" value="Go" onclick="check()">
+</form>
+</body>
+</html>

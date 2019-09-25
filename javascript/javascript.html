@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <script type="text/javascript"> 
+        var i=0
+        function addTwoNumbers(){
+        var result = confirm("Do u want to continue ?")
+
+        if(result==true){
+        var n = parseInt(prompt("Enter the first number:","NA"))
+        var m = parseInt(prompt("Enter the second number:","NA"))
+        alert(n+m)
+        alert(n+"+"+m + "="+(n+m))
+        alert(`${n}+${m}=${n+m}`)
+        }
+        else {
+            alert("Then why did u come here")
+        }
+        }
+        function displayMessage(){
+            var d = new Date();
+            if(d.getHours()>12){
+            alert("Good Afternoon")
+            }
+            else if(d.getHours()>18)
+            {
+                alert("Good Evening")
+            }
+            else{
+                alert("Good Morning")
+            }
+        }
+        function roomTemperature(){
+            temp = 32
+            return temp
+        }
+        function displayTempestatus(){
+            var t = roomTemperature()
+            if(t>30){
+                alert("TOO HOT")
+            }
+            else{
+                alert("TOO COLD")
+            }
+        }
+
+        </script>
+    </head>
+
+    <body>
+    <input type="button" value="AddNumbers" onclick="addTwoNumbers()">
+    <input type="button" value="DisplayMessage" onclick="displayMessage()">
+    <input type="button" value="RoomTemperature1" onclick="displayTempestatus()">
+
+    </body>
+</html>

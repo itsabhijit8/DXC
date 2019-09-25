@@ -1,0 +1,34 @@
+<html>
+<head>
+    <script type ="text/javascript">
+    function check(){
+        var number1 = document.getElementById("number1").value;
+        var number2 = document.getElementById("number2").value;
+        if(number1.length == 0){
+            alert("Please enter number1 to proceed ")
+        }
+        else if(number2.length == 0)
+            {
+                alert("Please enter number2 to proceed ")
+            }
+        
+        else{
+            var result = parseInt(number1) + parseInt(number2);
+            alert("The result is:" +result);
+        }
+    }
+    </script>
+    
+</head>
+<body>
+    <form>
+        Number1 : <input type="text" name= "number1" id ="number1"><span id ="s1"></span>
+        <br/>
+        Number2 : <input type="text" name= "number2" id ="number2"><span id ="s2"></span>
+        <br/>
+        <input type="button" value="Go" onclick="check()">
+    
+
+    </form>
+</body>
+</html>

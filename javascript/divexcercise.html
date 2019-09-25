@@ -1,0 +1,38 @@
+<html>
+<head>
+    <script type ="text/javascript">
+    function check(){
+        var number1 = document.getElementById("number1").value;
+        var number2 = document.getElementById("number2").value;
+        var s1 = document.getElementById("s1");
+        var s2 = document.getElementById("s2");
+        if(number1.length == 0){
+            s1.innerHTML= "<font color =  red>Please enter the first number</font>"
+        }
+        else if(number2.length == 0)
+            {
+                alert("Please enter number2 to proceed ")
+            }
+        
+        else{
+            var result = parseInt(number1) + parseInt(number2);
+            var div1 =document.getElementById("div1");
+            div1.innerHTML= +result;
+        }
+    }
+    </script>
+    
+</head>
+<body>
+    <form>
+        Number1 : <input type="text" name= "number1" id ="number1"><span id=s1></span>
+        <br/>
+        Number2 : <input type="text" name= "number2" id ="number2"><span id=s2></span>
+        <br/>
+        <input type="button" value="Go" onclick="check()">
+        <div id="div1"></div>
+    
+
+    </form>
+</body>
+</html>

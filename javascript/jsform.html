@@ -1,0 +1,26 @@
+<html>
+<head>
+    <script type ="text/javascript">
+    function check(){
+        var uname = document.getElementById("username").value;
+        if(uname.length == 0){
+            alert("Please enter your name ")
+        }
+        else{
+            alert("Welcome :" + uname);
+        }
+    }
+
+
+    </script>
+    
+</head>
+<body>
+    <form>
+        Username:<input type="text" name= "username" id ="username">
+        <br/>
+        <input type="button" value="Go" onclick="check()">
+
+    </form>
+</body>
+</html>
