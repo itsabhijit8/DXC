@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        function check(){
+            var uname=document.getElementById("uname").value;
+            var sname=document.getElementById("sname").value;
+            var s1=document.getElementById("s1")
+            var s2=document.getElementById("s2")
+            var s3=document.getElementById("s3")
+            var gender=document.getElementById("gender")
+            var comment=document.getElementById("comment")
+            if(uname.length==0){
+                s1.innerHTML="Name should not be empty"
+            }
+            else{
+                s1.innerHTML="Name:"+document.getElementById("uname").value
+            }
+            if(gender.checked==false){
+                s2.innerHTML="gender should not be empty"
+            }
+            else{
+                s2.innerHTML="your Gender is "+gender.value;
+            }
+            if(comment.checked==false){
+                s3.innerHTML="please enter comments"
+            }
+            else{
+                s3.innerHTML="Your comment is "+document.getElementById("comment").value
+            }
+
+
+        }
+
+            
+            
+         
+
+        </script>
+    </head>
+    <body bgcolor="pink">
+        <h1 align="center" ><font color="blue" >UserForm</font></h1>
+        <form>
+        <table border="10px" align="center">
+            <tr>
+                <td>Username:</td>
+                <td><input type="text" id="uname" name="uname" ></td>
+            </tr>
+            <tr>
+                <td>Spousename:</td>
+                <td><input type="text" id="sname" name="sname" ></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td onblur="check()"><input type="radio" id="gender" name="gender" value="male"  >Male<br>
+                <input type="radio" id="gender" name="gender" value="female" >female</td>
+                </tr>
+                <tr>
+                        <td>Do you like it?:</td>
+                        <td onselect="check()"><input type="radio" id="comment" name="comment" value="Yes"  >Yes<br>
+                            <input type="radio" id="comment" name="comment" value="No"  >No</td>
+                            
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="button" id="submit" name="submit" value="Submit" onclick="check()"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><span id="s1">   </span></td>
+                </tr>
+                <tr>
+                        <td colspan="2" align="center"><span id="s2">   </span></td>
+                    </tr>
+                    <tr>
+                            <td colspan="2" align="center"><span id="s3">   </span></td>
+                        </tr>
+                    </table>
+                    </form>
+        
+    </body>
+</html>

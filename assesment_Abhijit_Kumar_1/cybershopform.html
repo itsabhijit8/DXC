@@ -1,0 +1,118 @@
+<html>
+
+<head>
+    <title>Welcome to DXC- Registration Form</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+            .customDiv{
+                margin:2px;
+                min-height:150px;
+                background-color:silver;
+                text-align:center;
+                font-size:large;
+            }
+
+        </style>
+    <script type="text/javascript">
+        function check() {
+            var productID = document.getElementById("pid").value
+            var span1 = document.getElementById("s1")
+            var orderID = document.getElementById("oid").value
+            var span1 = document.getElementById("s2")
+            
+            if(productID.charAt(0)!="P"){
+                span1.innerHTML = "id should start with p"
+            }
+            if(productID.length!="6"){
+                span1.innerHTML ="id should contain 6 characters "
+            }
+            if(orderID.charAt(0)!="O"){
+                span2.innerHTML = "id should start with O"
+            }
+            if(orderID.charAt(1)!="D"){
+                span2.innerHTML = "id should have second letter as D"
+            }
+            if(orderID.length!=6){
+                span2.innerHTML ="id should contain 6 characters"
+            }
+        }
+
+
+
+    </script>
+</head>
+
+<body bgcolor="pink" text="red">
+        <div class="row">
+                <div class ="col-md-3 ">
+                    <div class="customDiv">Product Name</div>
+                </div>
+            
+            <div class="col-md-3">
+                <div class ="customDiv">Product Details</div>
+            </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class ="col-md-3">
+                <div class ="customDiv">Product Price</div>
+            </div>
+            <div class ="col-md-3 ">
+            <div class ="customDiv">Available Quantity</div>
+            </div>
+        
+        
+                        
+            </div>
+    <h2>
+        <center>Product Details</center>
+    </h2>
+    <form action="success.html" onsubmit="return check()">
+        <table cellspacing="10" cellpadding="10" align="center">
+            <tr>
+                <td>product ID</td>
+                <td><input type="text" name="pid" id="pid" /></td>
+                <td><span id="s1"></span></td>
+            </tr>
+            <tr>
+                <td>order ID</td>
+                <td><input type="text" name="oid" id="oid" /></td>
+                <td><span id="s2"></span></td>
+            </tr>
+            <tr>
+                <td> DOP</td>
+                <td><input type="text" name="DOP" id="DOP" required /></td>
+                <td><span id="errConfirmPassword"></span></td>
+            </tr>
+            <tr>
+                <td> Name *</td>
+                <td><input type="text" name="fullName" id="fullName" required /></td>
+                <td><span id="errFullName"></span></td>
+            </tr>
+            <tr>
+                    <td>No Ordered</td>
+                    <td><input type="text" name="quantity" id="no" required /></td>
+                    <td><span id="no"></span></td>
+            </tr>
+            <tr>
+                    <td>Price per unit</td>
+                    <td><input type="text" name="quantity" id="no" required /></td>
+                    <td><span id="no"></span></td>
+            </tr>
+            
+            
+            
+            
+            <tr>
+            <tr>
+                <td align="center">
+                    <input type="submit" value="submit" onclick="check()"></td>
+                <td align="center">
+                    <input type="reset" value="Clear"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
